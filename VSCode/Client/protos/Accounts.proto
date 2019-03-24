@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service AccountService {
+  rpc GetEmployeeName (EmployeeNameRequest) returns (EmployeeName);
+}
+
+message EmployeeNameRequest {
+  string emp_id = 1;
+}
+
+message EmployeeName {
+  string first_name = 1;
+  string last_name = 2;
+}
